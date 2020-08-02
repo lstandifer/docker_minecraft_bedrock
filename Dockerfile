@@ -11,7 +11,9 @@ RUN apt-get update && \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-EXPOSE 19132/udp
+ARG PORT_IPV4=19132/udp
+
+EXPOSE $PORT_IPV4
 
 VOLUME ["/data"]
 
@@ -40,7 +42,7 @@ COPY property-definitions.json /etc/bds-property-definitions.json
 # https://minecraft.gamepedia.com/Bedrock_Edition_1.12.0
 # https://minecraft.gamepedia.com/Bedrock_Edition_1.13.0
 # https://minecraft.gamepedia.com/Bedrock_Edition_1.14.0
-ENV VERSION=LATEST \
-    SERVER_PORT=19132
+ENV VERSION=LATEST
+ENV SERVER_PORT=$PORT_IPV4
 
 HEALTHCHECK --start-period=1m CMD /usr/local/bin/mc-monitor status-bedrock --host localhost --port $SERVER_PORT
