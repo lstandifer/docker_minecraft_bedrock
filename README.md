@@ -1,8 +1,4 @@
-[![Docker Pulls](https://img.shields.io/docker/pulls/itzg/minecraft-bedrock-server.svg)](https://hub.docker.com/r/itzg/minecraft-bedrock-server/)
-[![GitHub Issues](https://img.shields.io/github/issues-raw/itzg/docker-minecraft-bedrock-server.svg)](https://github.com/itzg/docker-minecraft-bedrock-server/issues)
-[![Build](https://github.com/itzg/docker-minecraft-bedrock-server/workflows/Build/badge.svg)](https://github.com/itzg/docker-minecraft-bedrock-server/actions?query=workflow%3ABuild)
-[![Discord](https://img.shields.io/discord/660567679458869252)](https://discord.gg/ScbTrAw)
-[![](https://img.shields.io/badge/Donate-Buy%20me%20a%20coffee-orange.svg)](https://www.buymeacoffee.com/itzg)
+this is clone of https://hub.docker.com/r/itzg/minecraft-server only edit made were to allow for setting a custom port with the --env PORT_IPV4=19133/udp
 
 ## Quickstart
 
